@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Perangkat Ajar Kelas 8 | MTsT Daarut Tahfizh Al-Ikhlas</title>
+  <meta name="description" content="Koleksi digital perangkat ajar Bahasa Inggris Kelas 8 — Kurikulum Merdeka 2025/2026. Paperless, terstruktur, siap pakai." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* ====== Root & Colors (Eye-Friendly) ====== */
+    :root {
+      --bg: #f9fafb;
+      --card: #ffffff;
+      --text: #1e293b;
+      --text-light: #475569;
+      --accent: #ea580c;
+      --accent-light: #fdba74;
+      --border: #e2e8f0;
+      --shadow: 0 10px 30px rgba(30, 41, 59, 0.08);
+      --radius: 18px;
+      --gap: 24px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --font-body: 'Inter', sans-serif;
+      --font-title: 'Playfair Display', serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ====== Layout ====== */
+    .app {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 36px 20px;
+    }
+
+    /* ====== Hero Header — Unik & Ringkas ====== */
+    .hero {
+      text-align: center;
+      padding: 48px 32px;
+      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+      color: white;
+      border-radius: var(--radius);
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="15" cy="20" r="1.5" fill="%23ffffff18"/><circle cx="75" cy="35" r="2" fill="%23ea580c22"/><circle cx="45" cy="70" r="1.8" fill="%23ffffff12"/></svg>') repeat;
+      opacity: 0.6;
+      animation: float 25s infinite linear;
+    }
+
+    @keyframes float {
+      from { transform: translateY(0); }
+      to { transform: translateY(-100px); }
+    }
+
+    .hero h1 {
+      font-family: var(--font-title);
+      font-size: 2.6rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero .tagline {
+      font-size: 1.15rem;
+      opacity: 0.95;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .hero .info {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    .hero .info div {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero .info i {
+      color: var(--accent-light);
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 36px;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: var(--accent-light);
+    }
+
+    .stat span {
+      font-size: 0.9rem;
+      opacity: 0.85;
+    }
+
+    /* ====== Search ====== */
+    .search-container {
+      position: relative;
+      max-width: 640px;
+      margin: 0 auto 32px;
+    }
+
+    .search {
+      width: 100%;
+      padding: 16px 56px 16px 20px;
+      font-size: 1.1rem;
+      border: 2px solid var(--border);
+      border-radius: 14px;
+      background: var(--card);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+      transition: var(--transition);
+    }
+
+    .search:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px rgba(234, 88, 12, 0.15);
+    }
+
+    .search-icon {
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--accent);
+      font-size: 1.3rem;
+    }
+
+    /* ====== Kategori — Unik & Simpel ====== */
+    .categories {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    .cat-chip {
+      padding: 10px 18px;
+      background: var(--card);
+      border: 1.5px solid var(--border);
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-light);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .cat-chip i {
+      color: var(--accent);
+      font-size: 0.95rem;
+    }
+
+    .cat-chip:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    /* ====== List View ====== */
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap);
+    }
+
+    .item {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 22px 26px;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 16px rgba(30, 41, 59, 0.06);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 36px rgba(30, 41, 59, 0.14);
+      border-color: var(--accent-light);
+    }
+
+    .item-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .item-title {
+      font-weight: 600;
+      font-size: 1.18rem;
+      color: var(--text);
+      margin-bottom: 8px;
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .item-meta {
+      display: flex;
+      gap: 18px;
+      font-size: 0.88rem;
+      color: var(--text-light);
+      flex-wrap: wrap;
+    }
+
+    .item-meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .item-meta i {
+      color: var(--accent);
+    }
+
+    .item-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .btn {
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background: #dc2626;
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text-light);
+      border: 1.5px solid var(--border);
+      padding: 8px 12px;
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* ====== Highlight ====== */
+    .highlight {
+      background: #fed7aa;
+      color: #c2410c;
+      padding: 1px 4px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    /* ====== Empty ====== */
+    .empty {
+      text-align: center;
+      padding: 90px 20px;
+      color: var(--text-light);
+    }
+
+    .empty i {
+      font-size: 3.8rem;
+      color: #cbd5e1;
+      margin-bottom: 18px;
+    }
+
+    .empty p {
+      font-size: 1.15rem;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* ====== Modal ====== */
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.88);
+      backdrop-filter: blur(14px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 1000;
+    }
+
+    .modal.open { display: flex; }
+
+    .viewer {
+      width: 100%;
+      max-width: 1100px;
+      height: 88vh;
+      background: white;
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 30px 70px rgba(0,0,0,0.35);
+    }
+
+    .bar {
+      padding: 18px 26px;
+      background: #f8fafc;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .modal-title {
+      font-weight: 600;
+      font-size: 1.22rem;
+    }
+
+    .modal-meta {
+      color: var(--text-light);
+      font-size: 0.95rem;
+    }
+
+    iframe { flex: 1; border: 0; }
+
+    /* ====== Footer — Highlighted ====== */
+    footer {
+      margin-top: 80px;
+      padding: 36px 20px 28px;
+      background: linear-gradient(to top, #f1f5f9 0%, transparent 100%);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.95rem;
+    }
+
+    footer .signature {
+      font-weight: 600;
+      color: var(--text);
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+
+    footer .role {
+      font-size: 0.98rem;
+      margin-bottom: 4px;
+    }
+
+    footer .system {
+      margin-top: 20px;
+      font-size: 0.88rem;
+      color: var(--accent);
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    /* ====== Responsive ====== */
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 2.1rem; }
+      .hero .info { gap: 20px; font-size: 0.9rem; }
+      .stats { gap: 24px; }
+      .item { flex-direction: column; }
+      .item-actions { justify-content: flex-end; }
+      .categories { gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <!-- Hero: Unik & Ringkas -->
+    <header class="hero">
+      <h1>Perangkat Ajar Kelas 8</h1>
+      <div class="tagline">Bahasa Inggris • Kurikulum Merdeka 2025/2026</div>
+      <div class="info">
+        <div><i class="fas fa-user-tie"></i> Ahmad Zaman Huri</div>
+        <div><i class="fas fa-school"></i> MTsT Daarut Tahfizh Al-Ikhlas</div>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <strong id="total-files">0</strong>
+          <span>Dokumen</span>
+        </div>
+        <div class="stat">
+          <strong id="total-views">0</strong>
+          <span>Dilihat</span>
+        </div>
+        <div class="stat">
+          <strong>5</strong>
+          <span>Kategori</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Search -->
+    <div class="search-container">
+      <input type="text" class="search" id="search" placeholder="Cari dokumen, chapter, atau kata kunci..." />
+      <i class="fas fa-search search-icon"></i>
+    </div>
+
+    <!-- Kategori Unik -->
+    <div class="categories">
+      <div class="cat-chip"><i class="fas fa-clipboard-check"></i> Asesmen</div>
+      <div class="cat-chip"><i class="fas fa-file-alt"></i> Dokumen Inti</div>
+      <div class="cat-chip"><i class="fas fa-lightbulb"></i> Materi & Aktivitas</div>
+      <div class="cat-chip"><i class="fas fa-book-open"></i> Modul Ajar</div>
+      <div class="cat-chip"><i class="fas fa-layer-group"></i> Template</div>
+    </div>
+
+    <!-- List -->
+    <main>
+      <div id="list" class="list"></div>
+      <div id="empty" class="empty" style="display:none">
+        <i class="fas fa-file-search"></i>
+        <p>Tidak ada dokumen yang sesuai dengan pencarian Anda.</p>
+      </div>
+    </main>
+
+    <!-- Footer: Simpel, Kuat, Highlighted -->
+    <footer>
+      <div class="signature">Dibuat & Dikelola oleh</div>
+      <div class="role">Ahmad Zaman Huri — Guru Bahasa Inggris</div>
+      <div>MTsT Daarut Tahfizh Al-Ikhlas</div>
+      <div class="system">Paperless Teaching System</div>
+    </footer>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="viewer">
+      <div class="bar">
+        <div>
+          <strong class="modal-title" id="modal-title">Preview</strong>
+          <span class="modal-meta" id="modal-meta"></span>
+        </div>
+        <div>
+          <button class="btn btn-ghost" id="open-new">Buka</button>
+          <button class="btn btn-ghost" id="close">Tutup</button>
+        </div>
+      </div>
+      <iframe id="viewer-frame" title="Preview" src="about:blank" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <script>
+    // ===== DATA =====
+    const files = [
+      {title:'PAS - Soal & Kunci (PAS Genap)', folder:'Asesmen', link:'https://docs.google.com/document/d/e/2PACX-1vQTdjhzjlsNRdDjPpnkFHsHPlFqeTA7xWReAFlx6nteeUEyDNTz9bitrIY6Hpg4u56SiPIz9gR1dgdS/pub', type:'Google Doc'},
+      {title:'PTS - Soal PTS Ganjil', folder:'Asesmen', link:'https://docs.google.com/document/d/e/2PACX-1vSc3E8AdatkHSCWuNp9O1WjlFArczoEQhiCJFIX5G_UxqDz4h7d86N9nvfDuNtADsSjaXmga2JzmXOH/pub', type:'Google Doc'},
+      {title:'ATP - Alur Tujuan Pembelajaran', folder:'Dokumen Inti', link:'https://docs.google.com/document/d/e/2PACX-1vSlob00jaPIYR4x9G0kU_GhuZXlFtImnQHhDsqgbn2kEAdcyb7poKBstmj0INDiLpE56aU_2ZD6NmEo/pub', type:'Google Doc'},
+      {title:'CP - Capaian Pembelajaran', folder:'Dokumen Inti', link:'https://docs.google.com/document/d/e/2PACX-1vRFZlhzcSpTqTjqVuM7SVJbVC0B_2zer9IAoq2oWlbKZCasCTaVBcMtGHUikrn0TuHuAOkkf_E3bg0f/pub', type:'Google Doc'},
+      {title:'PROTA - Program Tahunan', folder:'Dokumen Inti', link:'https://docs.google.com/document/d/e/2PACX-1vT5T60Yva6u_t1XuuSZ7mrmuGVHbAwoHOpbX4MLuyTPLKHHk35S-BvUumeHBJECzpx9GXdleps_OdEB/pub', type:'Google Doc'},
+      {title:'PROMES - Program Semester Ganjil', folder:'Dokumen Inti', link:'https://docs.google.com/document/d/e/2PACX-1vSZrAjlkPMjwtAQD9LycEPHBgxc6Y_IGwd-BcnBkitXRvaa-iUc-YppIYZib6e8B0q_55p2Ongc7qBX/pub', type:'Google Doc'},
+      {title:'PROMES - Program Semester Genap', folder:'Dokumen Inti', link:'https://docs.google.com/document/d/e/2PACX-1vRky_-ShK2qndqzH5DpoJVDn3znJ94UtFSPsZySg4asr-a3xTbotRDiAiQO3sHkmA1LnwbRiC0PIV5Z/pub', type:'Google Doc'},
+      {title:'TP - Tujuan Pembelajaran per Chapter', folder:'Dokumen Inti', link:'https://docs.google.com/document/d/e/2PACX-1vTkmYcR_93DhhIEVJj5urA3p69kUAxjPRWpXgh_bgLLbAChVZqRdLOcWhMq8MmQSfuv0U-wcqy24iEn/pub', type:'Google Doc'},
+      {title:'Game & Ice Breaking per Chapter', folder:'Materi & Aktivitas', link:'https://docs.google.com/document/d/e/2PACX-1vRS8RgVthWD-KSsSajbbwIJIcMAwLB2OTea8Twq54mKPHQpZEM6mu1R4RENZ9eaTBE0hxk65D7RMFXb/pub', type:'Google Doc'},
+      {title:'Grammar Summary per Chapter', folder:'Materi & Aktivitas', link:'https://docs.google.com/document/d/e/2PACX-1vSsf6gs4sE-pKSv-0ZDrqY72EtUFnStdwjDBQHWAIPB7CdoxAbamykX3ToCchSX0sBRXPdCKoGSnt-H/pub', type:'Google Doc'},
+      {title:'Slide PPT per Chapter (PDF converted)', folder:'Materi & Aktivitas', link:'https://docs.google.com/document/d/e/2PACX-1vRws5zTbghGBwElKJBer7WB7RxlPqyKp31mUaPkbpWk0sHRWwWEfUR3Vzhhwk_D_koGA667dffqCEed/pub', type:'Google Doc'},
+      {title:'Vocabulary List per Chapter', folder:'Materi & Aktivitas', link:'https://docs.google.com/document/d/e/2PACX-1vSN_o0ItI0t2AIJOE4CGN47wpNbSUXQ8DtbHNwqgilzeaZ7bpyMDOxCGvk3DNvCjObfSrmmlpFUMWUH/pub', type:'Google Doc'},
+      {title:'Worksheet & Task per Chapter', folder:'Materi & Aktivitas', link:'https://docs.google.com/document/d/e/2PACX-1vQmHihzfIcL0hKjG3hFDpn5mzYQv1MGmj8b1LK93b4vYiS0KxLjxKfQfbHLKBO3zCtGsn13hyVjhwjF/pub', type:'Google Doc'},
+      {title:'Modul Ajar - Chapter 1', folder:'Modul Ajar', link:'https://docs.google.com/document/d/e/2PACX-1vTebz4cVyBt4HW3dv19EySBPxUZw_0KnC1aRaJsw6FUic5Piwgcb_Yo498ICoaV9xmlQP5fhvcP3L1S/pub', type:'Google Doc'},
+      {title:'Modul Ajar - Chapter 2', folder:'Modul Ajar', link:'https://docs.google.com/document/d/e/2PACX-1vQTlTfpx20M6sp_rbhHFK-gMXFpUc7MYUW5XdmtcPK6dsS-7T225gAomfWwo3dlpF1xsxmE_Uzc4Zd4/pub', type:'Google Doc'},
+      {title:'Modul Ajar - Chapter 3', folder:'Modul Ajar', link:'https://docs.google.com/document/d/e/2PACX-1vQTdaWHcrE46hgxEhj9uizTAHC3o-qimmKVwoKl64Nb9V_VoVhwA0yIDEf3OpbfKQAHV5hRu_P34SUa/pub', type:'Google Doc'},
+      {title:'Modul Ajar - Chapter 4', folder:'Modul Ajar', link:'https://docs.google.com/document/d/e/2PACX-1vTHRslW19pZRILi7mXtPbphlUV6KybY07SPHUdHxKIQ6w896Gq-MRM6uQlUcOL__GvLB9NbpB-sGmuB/pub', type:'Google Doc'},
+      {title:'Modul Ajar - Chapter 5', folder:'Modul Ajar', link:'https://docs.google.com/document/d/e/2PACX-1vSb3zGM6hM9j4uiCMOZOEwo3CS6EaJDDcdYTRWuSV9jduoRdJveGf6HZYPI8xGNZdKzfJ8bjxRzG6MS/pub', type:'Google Doc'},
+      {title:'Template Modul Ajar', folder:'Template', link:'https://docs.google.com/document/d/e/2PACX-1vQRuGu7kTu31SQ5eayrW7uHSEpODbj_dTFFHQkVDL7tW8ueY2g5pywuflGaNt-2A6FO_fd0njSsGLnO/pub', type:'Google Doc'},
+      {title:'Template Rubrik Penilaian', folder:'Template', link:'https://docs.google.com/document/d/e/2PACX-1vQ4JoGQW10U6HJ4MTnykUkRhZFblDlxZZ5o8nvEWRAYDFQPHZq8DGc8QAJktBpEA0fmTCzRen91B_sT/pub', type:'Google Doc'},
+      {title:'Template Worksheet', folder:'Template', link:'https://docs.google.com/document/d/e/2PACX-1vQwggnm3yDR6h_A8xWixlEMPX8dLjiOypEzqDCA-BXD8_DI5Ak6WJJGxxivaGg_Qz1XELpw-q7i0_p-/pub', type:'Google Doc'},
+    ];
+
+    // Fake + persistent views
+    files.forEach(f => {
+      const key = `view:${f.link}`;
+      const saved = localStorage.getItem(key);
+      f.views = saved ? parseInt(saved, 10) : Math.floor(Math.random() * 400) + 80;
+      localStorage.setItem(key, f.views);
+    });
+
+    // DOM
+    const listEl = document.getElementById('list');
+    const empty = document.getElementById('empty');
+    const search = document.getElementById('search');
+    const modal = document.getElementById('modal');
+    const frame = document.getElementById('viewer-frame');
+    const modalTitle = document.getElementById('modal-title');
+    const modalMeta = document.getElementById('modal-meta');
+    const totalFiles = document.getElementById('total-files');
+    const totalViews = document.getElementById('total-views');
+
+    let currentLink = '';
+
+    // Init stats
+    totalFiles.textContent = files.length;
+    totalViews.textContent = files.reduce((a,b) => a + b.views, 0).toLocaleString();
+
+    // Highlight
+    function highlightText(text, query) {
+      if (!query) return text;
+      const regex = new RegExp(`(${query})`, 'gi');
+      return text.replace(regex, '<span class="highlight">$1</span>');
+    }
+
+    // Create item
+    function createItem(file) {
+      const el = document.createElement('div');
+      el.className = 'item';
+      el.innerHTML = `
+        <div class="item-content">
+          <div class="item-title">${file.title}</div>
+          <div class="item-meta">
+            <span><i class="fas fa-folder"></i> ${file.folder}</span>
+            <span><i class="fas fa-eye"></i> ${file.views} dilihat</span>
+            <span><i class="fas fa-file-lines"></i> ${file.type}</span>
+          </div>
+        </div>
+        <div class="item-actions">
+          <button class="btn btn-primary" data-action="preview">Preview</button>
+          <button class="btn btn-ghost" data-action="open">Buka</button>
+          <button class="btn btn-ghost" data-action="copy">Salin</button>
+        </div>
+      `;
+
+      el.querySelectorAll('[data-action]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (btn.dataset.action === 'preview') openPreview(file);
+          if (btn.dataset.action === 'open') { window.open(file.link, '_blank'); incrementView(file); }
+          if (btn.dataset.action === 'copy') {
+            navigator.clipboard.writeText(file.link);
+            btn.innerHTML = 'Tersalin';
+            setTimeout(() => btn.innerHTML = 'Salin', 1500);
+          }
+        });
+      });
+
+      return el;
+    }
+
+    function incrementView(file) {
+      file.views++;
+      localStorage.setItem(`view:${file.link}`, file.views);
+      totalViews.textContent = files.reduce((a,b) => a + b.views, 0).toLocaleString();
+    }
+
+    function render(query = '') {
+      listEl.innerHTML = '';
+      const filtered = files.filter(f => 
+        f.title.toLowerCase().includes(query.toLowerCase()) ||
+        f.folder.toLowerCase().includes(query.toLowerCase())
+      );
+
+      if (!filtered.length) {
+        empty.style.display = 'block';
+        return;
+      }
+      empty.style.display = 'none';
+
+      const frag = document.createDocumentFragment();
+      filtered.forEach(f => {
+        const item = createItem(f);
+        if (query) {
+          const titleEl = item.querySelector('.item-title');
+          titleEl.innerHTML = highlightText(f.title, query);
+        }
+        frag.appendChild(item);
+      });
+      listEl.appendChild(frag);
+    }
+
+    search.addEventListener('input', () => render(search.value.trim()));
+
+    // Modal
+    function openPreview(file) {
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      modalTitle.textContent = file.title;
+      modalMeta.textContent = `${file.folder} • ${file.type}`;
+      currentLink = file.link;
+      frame.src = file.link;
+      incrementView(file);
+    }
+
+    document.getElementById('close').onclick = closeModal;
+    document.getElementById('open-new').onclick = () => window.open(currentLink, '_blank');
+    modal.onclick = (e) => { if (e.target === modal) closeModal(); };
+    function closeModal() {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      frame.src = 'about:blank';
+    }
+
+    // Init
+    render();
+  </script>
+</body>
+</html>
